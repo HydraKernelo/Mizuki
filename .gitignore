@@ -67,3 +67,6 @@ src/data/bilibili-data.json
 
 # dev server logs
 /dev-server*.log
+
+# album photos provided by content submodule
+/public/images/albums/*
