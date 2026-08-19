@@ -6,3 +6,46 @@ $ node scripts/sync-content.js || true
 内容目录已存在：C:\Users\Administrator\Mizuki\content
 正在同步远程内容（强制模式）...
 No local changes to save
+Already on 'main'
+内容同步成功（分支：main）
+
+正在建立内容链接...
+已创建符号链接：src/content/posts -> posts
+已创建符号链接：src/content/spec -> spec
+已创建符号链接：src/data -> data
+已创建符号链接：public/images -> images
+跳过不存在的源目录：overrides
+
+内容同步完成
+
+warning: in the working copy of '.gitmodules', CRLF will be replaced by LF the next time Git touches it
+已提交内容更新（main@d2d675e）
+$ astro dev
+13:09:08 [vite] connected.
+13:09:16 [types] Generated 4ms
+13:09:16 [vite] connected.
+13:09:18 [content] Syncing content
+13:09:19 [content] Synced content
+13:09:20 [vite] Re-optimizing dependencies because vite config has changed
+ astro  v7.1.3 ready in 29781 ms
+┃ Local    http://localhost:3000/
+┃ Network  use --host to expose
+13:09:20 watching for file changes...
+13:09:21 [vite] [optimizer] scanning dependencies...
+13:09:24 [vite] [optimizer] bundling dependencies...
+13:09:26 [vite] [optimizer] bundling dependencies...
+13:10:10 [200] / 905ms
+13:10:34 [200] /posts/welcome/ 19835ms
+13:10:45 [200] / 90ms
+13:14:48 [200] / 388ms
+13:14:49 [200] / 629ms
+13:14:54 [vite] [optimizer] bundling dependencies...
+13:15:03 [vite] dependencies optimized: @swup/astro/client/Swup, @swup/astro/client/SwupA11yPlugin, @swup/astro/client/SwupScriptsPlugin, @swup/astro/idle, @swup/astro/serialise
+13:15:03 [vite] optimized dependencies changed. reloading
+13:15:06 [200] / 94ms
+13:17:56 [200] /api/calendar-data.json 7ms
+13:21:20 [vite] program reload
+13:21:20 [ERROR] [vite] An error happened during full reload
+Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?
+Error: Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?
+    at loadAndTransform (file:///C:/Users/Administrator/Mizuki/node_modules/.pnpm/vite@8.1.5_@types+node@26.1_26f7bfb0857bd164db2263c15ac1116a/node_modules/vite/dist/node/chunks/node.js:20113:31)
