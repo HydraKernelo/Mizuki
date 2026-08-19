@@ -1,0 +1,22 @@
+$ node scripts/sync-content.js || true
+已加载 .env 配置文件
+
+开始同步内容...
+
+内容目录已存在：C:\Users\Administrator\Mizuki\content
+正在同步远程内容（强制模式）...
+No local changes to save
+fatal: unable to access 'https://github.com/HydraKernelo/Mizuki-Content.git/': Recv failure: Connection was reset
+内容更新失败： Command failed: git fetch --all --prune
+
+正在建立内容链接...
+已创建符号链接：src/content/posts -> posts
+已创建符号链接：src/content/spec -> spec
+已创建符号链接：src/data -> data
+已创建符号链接：public/images -> images
+跳过不存在的源目录：overrides
+
+内容同步完成
+
+已提交内容更新（main@d2d675e）
+$ astro dev
