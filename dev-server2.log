@@ -53,3 +53,18 @@ Error: Failed to load url astro:server-app.js (resolved id: astro:server-app.js)
 13:27:48 [200] /api/calendar-data.json 4ms
 13:27:56 [200] /posts/welcome/ 3587ms
 13:28:09 [200] /api/calendar-data.json 2ms
+21:16:39 [mizuki-post-glob-loader] Reloaded data from auto-deploy-test.md
+21:28:54 [200] /posts/welcome/ 5201ms
+21:53:00 [200] /posts/welcome/ 1386ms
+21:53:24 [200] /posts/welcome/ 1902ms
+21:53:25 [watch] src/config/profileConfig.ts
+21:53:31 [200] /_image/ 2196ms
+21:53:31 [watch] src/config/siteConfig.ts
+21:53:34 [watch] src/config/siteConfig.ts
+21:53:36 [200] /posts/welcome/ 5002ms
+21:53:36 [200] /posts/welcome/ 2111ms
+21:53:37 [200] /posts/welcome/ 973ms
+21:54:06 [watch] src/config/navBarConfig.ts
+21:54:08 [200] /posts/welcome/ 363ms
+21:55:39 [200] /posts/welcome/ 1882ms
+[ELIFECYCLE] Command failed with exit code 4294967295.

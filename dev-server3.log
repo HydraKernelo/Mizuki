@@ -1,0 +1,8 @@
+$ node scripts/sync-content.js || true
+已加载 .env 配置文件
+
+开始同步内容...
+
+内容目录已存在：C:\Users\Administrator\Mizuki\content
+正在同步远程内容（强制模式）...
+No local changes to save
