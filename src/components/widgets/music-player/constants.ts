@@ -1,4 +1,5 @@
 import amnesiaCover from "../../../assets/music/cover/amnesia.webp?url";
+import amnesiaUrl from "../../../assets/music/url/amnesia.mp3?url";
 import type { Song } from "./types";
 
 export const STORAGE_KEY_VOLUME = "music-player-volume";
@@ -13,7 +14,7 @@ export const LOCAL_PLAYLIST: Song[] = [
 		title: "Amnesia (纯音乐)",
 		artist: "YUN EN",
 		cover: amnesiaCover,
-		url: "assets/music/url/amnesia.mp3",
+		url: amnesiaUrl,
 		duration: 160,
 	},
 ];
