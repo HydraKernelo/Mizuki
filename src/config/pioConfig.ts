@@ -6,12 +6,8 @@ import type { PioConfig } from "../types/config";
 export const pioConfig: PioConfig = {
 	enable: true, // 启用看板娘
 	models: [
-		"/pio/models/Hiyori/Hiyori.model3.json",
-		"/pio/models/Haru/Haru.model3.json",
-		"/pio/models/Mao/Mao.model3.json",
-		"/pio/models/Mark/Mark.model3.json",
-		"/pio/models/Natori/Natori.model3.json",
-	], // 模型列表（可切换）
+		"/pio/models/NOIR/noir.model3.json",
+	], // 默认模型（NOIR）
 	position: "left", // 模型位置
 	width: 280, // 默认宽度
 	height: 250, // 默认高度
