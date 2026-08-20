@@ -1,0 +1,116 @@
+---
+// StaticMascot.astro — 静态 PNG 看板娘（无动画）
+// 固定右下角显示 DeepSeek 娘，可点击关闭，支持拖动
+import { Icon } from "astro-icon/components";
+---
+
+<div id="static-mascot" class="static-mascot">
+	<button
+		id="mascot-close"
+		class="mascot-close"
+		aria-label="关闭看板娘"
+		title="关闭"
+	>
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+			<path d="M18 6L6 18M6 6l12 12" />
+		</svg>
+	</button>
+	<img
+		src="/mascot/deepseek.webp"
+		alt="DeepSeek 娘"
+		class="mascot-img"
+		draggable="true"
+	/>
+	<style>
+		.static-mascot {
+			position: fixed;
+			bottom: 16px;
+			right: 16px;
+			z-index: 999;
+			pointer-events: auto;
+			user-select: none;
+			-webkit-user-select: none;
+		}
+		.mascot-img {
+			width: 160px;
+			height: 160px;
+			object-fit: contain;
+			cursor: grab;
+			transition: transform 0.2s ease;
+			-webkit-user-drag: element;
+		}
+		.mascot-img:hover {
+			transform: scale(1.05);
+		}
+		.mascot-img:active {
+			cursor: grabbing;
+		}
+		.mascot-close {
+			position: absolute;
+			top: -6px;
+			right: -6px;
+			width: 22px;
+			height: 22px;
+			border-radius: 50%;
+			background: rgba(0, 0, 0, 0.6);
+			color: white;
+			border: none;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			transition: opacity 0.2s;
+			z-index: 2;
+		}
+		.static-mascot:hover .mascot-close {
+			opacity: 1;
+		}
+		@media (max-width: 768px) {
+			.static-mascot {
+				display: none; /* 移动端隐藏 */
+			}
+		}
+	</style>
+	<script is:inline>
+		(function () {
+			const container = document.getElementById("static-mascot");
+			const img = document.querySelector(".mascot-img");
+			const closeBtn = document.getElementById("mascot-close");
+			if (!container || !img) return;
+
+			// 关闭
+			closeBtn?.addEventListener("click", () => {
+				container.style.display = "none";
+				localStorage.setItem("mascotClosed", "true");
+			});
+			if (localStorage.getItem("mascotClosed") === "true") {
+				container.style.display = "none";
+			}
+
+			// 拖动
+			let isDragging = false;
+			let offsetX = 0,
+				offsetY = 0;
+			img.addEventListener("mousedown", (e) => {
+				isDragging = true;
+				const rect = container.getBoundingClientRect();
+				offsetX = e.clientX - rect.left;
+				offsetY = e.clientY - rect.top;
+				e.preventDefault();
+			});
+			document.addEventListener("mousemove", (e) => {
+				if (!isDragging) return;
+				container.style.left = "auto";
+				container.style.right = "auto";
+				container.style.bottom = "auto";
+				container.style.top = "auto";
+				container.style.left = e.clientX - offsetX + "px";
+				container.style.top = e.clientY - offsetY + "px";
+			});
+			document.addEventListener("mouseup", () => {
+				isDragging = false;
+			});
+		})();
+	</script>
+</div>

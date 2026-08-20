@@ -2,6 +2,7 @@
 import { Font } from "astro:assets";
 import { PageProgressBar } from "@components/control/PageProgressBar";
 import Pio from "@components/features/pio/Pio.astro";
+import StaticMascot from "@components/misc/StaticMascot.astro";
 import ConfigCarrier from "@components/misc/ConfigCarrier.astro";
 import MusicPlayer from "@components/widgets/music-player/MusicPlayer.svelte";
 import CodeGroupManager from "@/components/features/markdown/CodeGroupManager.astro";
@@ -252,6 +253,9 @@ const bannerOffset =
 
 		<!-- Pio 看板娘组件 - 仅在进入视口时加载 -->
 		{pioConfig.enable && <Pio config={pioConfig} />}
+
+		<!-- DeepSeek 娘静态看板娘（无动画） -->
+		<StaticMascot />
 
 		<CodeGroupManager />
 		<DiagramManager />
