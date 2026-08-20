@@ -4,7 +4,7 @@ import type { PioConfig } from "../types/config";
 // 模型来源：Live2D 官方示例模型（CubismWebSamples），免费可商用，需标注著作权
 // 许可证：https://www.live2d.com/eula/live2d-sample-model-terms_cn.html
 export const pioConfig: PioConfig = {
-	enable: true, // 启用看板娘
+	enable: false, // 启用看板娘（当前关闭）
 	models: [
 		"/pio/models/NOIR/noir.model3.json",
 	], // 默认模型（NOIR）
