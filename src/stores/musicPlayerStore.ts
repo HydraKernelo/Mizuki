@@ -60,7 +60,7 @@ class MusicPlayerStore {
 			volume: 0.7,
 			isMuted: false,
 			isShuffled: false,
-			isRepeating: 0,
+			isRepeating: 1,
 			showPlaylist: false,
 			errorMessage: "",
 			showError: false,
@@ -298,7 +298,7 @@ class MusicPlayerStore {
 			this.state.isLoading = false;
 
 			if (this.state.playlist.length > 0) {
-				this.selectSong(this.state.playlist[0], false);
+				this.selectSong(this.state.playlist[0], true);
 			}
 		} catch (_e) {
 			this.showError(i18n(Key.musicPlayerErrorPlaylist));
@@ -344,7 +344,7 @@ class MusicPlayerStore {
 		if (this.state.playlist.length === 0) {
 			this.showError("本地播放列表为空");
 		} else {
-			this.selectSong(this.state.playlist[0], false);
+			this.selectSong(this.state.playlist[0], true);
 		}
 	}
 
