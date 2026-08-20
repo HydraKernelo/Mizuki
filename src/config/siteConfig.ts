@@ -162,15 +162,15 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true,
-			title: "わたしの部屋",
+			title: "HydraKernel",
 			switchable: true,
 
 			subtitle: [
-				"特別なことはないけど、君がいると十分です",
-				"今でもあなたは私の光",
-				"君ってさ、知らないうちに私の毎日になってたよ",
-				"君と話すと、なんか毎日がちょっと楽しくなるんだ",
-				"今日はなんでもない日。でも、ちょっとだけいい日",
+				"欢迎来到我的博客",
+				"记录技术、生活与折腾",
+				"探索 AI 时代的创作方式",
+				"说一句话，AI 帮你发帖",
+				"保持好奇，持续折腾",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
