@@ -40,7 +40,7 @@ const config = {
 					document.documentElement
 						.getAttribute("data-theme")
 						?.includes("dark");
-				theme = isDark ? "dark" : "light";
+				theme = isDark ? "noborder_dark" : "noborder_light";
 			}
 
 			container.innerHTML = "";
@@ -149,7 +149,7 @@ const config = {
 						document.documentElement
 							.getAttribute("data-theme")
 							?.includes("dark");
-					const theme = isDark ? "dark" : "light";
+					const theme = isDark ? "noborder_dark" : "noborder_light";
 
 					const iframe = document.querySelector(
 						"iframe.giscus-frame",
