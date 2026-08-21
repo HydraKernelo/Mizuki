@@ -3,10 +3,10 @@ import { SITE_LANG } from "./siteConfig";
 
 // 评论系统配置
 export const commentConfig: CommentConfig = {
-	enable: false, // 启用评论功能（当前关闭）。当设置为 false 时，评论组件将不会显示在文章区域。
-	system: "giscus", // 评论系统选择: "twikoo" | "giscus"
+	enable: true, // 启用评论功能（Twikoo 用户系统）
+	system: "twikoo", // 评论系统选择: "twikoo" | "giscus"
 	twikoo: {
-		envId: "https://twikoo.vercel.app",
+		envId: "https://mizuki-twikoo.netlify.app/.netlify/functions/twikoo",
 		lang: SITE_LANG,
 	},
 	giscus: {
