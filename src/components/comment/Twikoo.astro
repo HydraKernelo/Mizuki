@@ -78,8 +78,33 @@ const config = {
 				commentEl.innerHTML = "";
 				const dynamicConfig = createTwikooConfig();
 				await twikoo.init(dynamicConfig);
+				// 表单渲染是异步的，延迟执行隐藏"网址"输入框
+				setTimeout(hideLinkField, 600);
+				setTimeout(hideLinkField, 1500);
 			} catch (error) {
 				console.error("[Twikoo] 初始化失败:", error);
+			}
+		}
+
+		// 隐藏评论表单里的"网址"输入框（昵称/邮箱保留）
+		function hideLinkField() {
+			const container = document.getElementById("tcomment");
+			if (!container) {
+				return;
+			}
+			const inputs = container.querySelectorAll("input");
+			for (const input of inputs) {
+				const ph = (input.placeholder || "").trim();
+				if (/网址|链接|网站|website|url|link/i.test(ph)) {
+					const item = input.closest(
+						".el-form-item, .el-input, [class*='form-item']",
+					);
+					if (item) {
+						item.style.display = "none";
+					} else {
+						input.style.display = "none";
+					}
+				}
 			}
 		}
 
