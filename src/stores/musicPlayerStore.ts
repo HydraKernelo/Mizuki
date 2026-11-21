@@ -298,7 +298,10 @@ class MusicPlayerStore {
 			this.state.isLoading = false;
 
 			if (this.state.playlist.length > 0) {
-				this.selectSong(this.state.playlist[0], true);
+				this.selectSong(
+					this.state.playlist[0],
+					musicPlayerConfig.autoplay === true,
+				);
 			}
 		} catch (_e) {
 			this.showError(i18n(Key.musicPlayerErrorPlaylist));
@@ -344,7 +347,10 @@ class MusicPlayerStore {
 		if (this.state.playlist.length === 0) {
 			this.showError("本地播放列表为空");
 		} else {
-			this.selectSong(this.state.playlist[0], true);
+			this.selectSong(
+				this.state.playlist[0],
+				musicPlayerConfig.autoplay === true,
+			);
 		}
 	}
 
