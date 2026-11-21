@@ -3,20 +3,12 @@ import type { FullscreenWallpaperConfig } from "../types/config";
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	enable: true,
 	src: {
-		desktop: [
-			"/assets/desktop-banner/1.webp",
-			"/assets/desktop-banner/2.webp",
-			"/assets/desktop-banner/3.webp",
-		],
-		mobile: [
-			"/assets/mobile-banner/1.webp",
-			"/assets/mobile-banner/2.webp",
-			"/assets/mobile-banner/3.webp",
-		],
+		desktop: ["/assets/desktop-banner/1.webp"], // 桌面壁纸（仅一张）
+		mobile: ["/assets/mobile-banner/1.webp"], // 移动壁纸（仅一张）
 	},
 	position: "center",
 	carousel: {
-		enable: true,
+		enable: false,
 		interval: 5,
 	},
 	zIndex: -1,
